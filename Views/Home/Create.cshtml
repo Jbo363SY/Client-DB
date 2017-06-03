@@ -1,0 +1,307 @@
+﻿@model ClientDatabase.Models.Client
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>New Client Form</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <h4>Please enter the client's details</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(c => c.Name, htmlAttributes: new { @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Address, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Postcode, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Postcode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Postcode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.TelephoneNo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.TelephoneNo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.TelephoneNo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Capacity, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Capacity, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Capacity, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.DoB, htmlAttributes: new { @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.DoB, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.DoB, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Gender, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Gender, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Height, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Height, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Height, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Weight, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Weight, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Weight, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.GP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.GP, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.GP, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Dentist, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Dentist, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Dentist, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.HospitalOrCentre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.HospitalOrCentre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.HospitalOrCentre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Consultant, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Consultant, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Consultant, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.OtherHealthAgencies, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.OtherHealthAgencies, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.OtherHealthAgencies, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.PersonalHistory, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.PersonalHistory, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.PersonalHistory, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.HealthAndPhysicalNeeds, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.HealthAndPhysicalNeeds, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.HealthAndPhysicalNeeds, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Mobility, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Mobility, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Mobility, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.MedicalCareInformation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.MedicalCareInformation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.MedicalCareInformation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Medication, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Medication, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Medication, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.MonitoringHealth, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.MonitoringHealth, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.MonitoringHealth, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Eyesight, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Eyesight, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Eyesight, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Hearing, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Hearing, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Hearing, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.MentalAndEmotionalWellbeing, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.MentalAndEmotionalWellbeing, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.MentalAndEmotionalWellbeing, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.DietaryNeeds, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.DietaryNeeds, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.DietaryNeeds, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.EatingHabits, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.EatingHabits, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.EatingHabits, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.DecisionMaking, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.DecisionMaking, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.DecisionMaking, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.FoodPreferences, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.FoodPreferences, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.FoodPreferences, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.FoodQuantities, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.FoodQuantities, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.FoodQuantities, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.PersonalCare, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.PersonalCare, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.PersonalCare, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.SleepingPattern, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.SleepingPattern, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.SleepingPattern, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.HealthAndSafetyAwareness, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.HealthAndSafetyAwareness, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.HealthAndSafetyAwareness, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.LanguageAndCommunication, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.LanguageAndCommunication, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.LanguageAndCommunication, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.CulturalInformation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.CulturalInformation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.CulturalInformation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.CommunicatingPhysicalAndEmotionalCondition, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.CommunicatingPhysicalAndEmotionalCondition, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.CommunicatingPhysicalAndEmotionalCondition, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Sociability, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Sociability, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Sociability, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.BehaviourPatterns, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.BehaviourPatterns, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.BehaviourPatterns, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.LeisureAndCommunityParticipation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.LeisureAndCommunityParticipation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.LeisureAndCommunityParticipation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.EducationalAndVocationalAbilities, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.EducationalAndVocationalAbilities, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.EducationalAndVocationalAbilities, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.FinanceAndMoneyManagement, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.FinanceAndMoneyManagement, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.FinanceAndMoneyManagement, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(c => c.Other, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(c => c.Other, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(c => c.Other, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col col-md-10">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </div>
+
+        <div>
+            @Html.ActionLink("Back to list", "Index")
+        </div>
+
+}

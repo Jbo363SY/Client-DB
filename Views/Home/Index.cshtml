@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ClientDatabase.Models.Client>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Client Index</h2>
+
+<p>
+    @Html.ActionLink("Add new client?", "Create")
+
+    @using (Html.BeginForm())
+    {
+    <p>
+        Gender: @Html.DropDownList("clientGender", "All")||
+        Name: @Html.TextBox("searchString")
+        <input type="submit" value="Filter" class="btn btn-info"/>
+
+    </p>
+
+    }
+    </p>
+
+    <table class="table">
+        <tr>
+            @*<image>
+                @Html.DisplayFor(client => client.Photograph)
+            </image>*@
+
+            <th>
+                @Html.DisplayNameFor(client => client.Name)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(client => client.DoB)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(client => client.Address)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(client => client.Postcode)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(client => client.TelephoneNo)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(c => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(c => item.DoB)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(c => item.Address)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(c => item.Postcode)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(c => item.TelephoneNo)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit Client Record", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details of Client", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete Client Record", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+
+        }
+
+    </table>

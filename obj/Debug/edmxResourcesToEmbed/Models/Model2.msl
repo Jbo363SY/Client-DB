@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClientDetailsModelStoreContainer" CdmEntityContainer="ClientDetailsEntities2">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="ClientDetailsModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="DoB" ColumnName="DoB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="GP" ColumnName="GP" />
+          <ScalarProperty Name="Dentist" ColumnName="Dentist" />
+          <ScalarProperty Name="HospitalOrCentre" ColumnName="HospitalOrCentre" />
+          <ScalarProperty Name="Consultant" ColumnName="Consultant" />
+          <ScalarProperty Name="OtherHealthAgencies" ColumnName="OtherHealthAgencies" />
+          <ScalarProperty Name="PersonalHistory" ColumnName="PersonalHistory" />
+          <ScalarProperty Name="HealthAndPhysicalNeeds" ColumnName="HealthAndPhysicalNeeds" />
+          <ScalarProperty Name="Mobility" ColumnName="Mobility" />
+          <ScalarProperty Name="MedicalCareInformation" ColumnName="MedicalCareInformation" />
+          <ScalarProperty Name="Medication" ColumnName="Medication" />
+          <ScalarProperty Name="MonitoringHealth" ColumnName="MonitoringHealth" />
+          <ScalarProperty Name="Eyesight" ColumnName="Eyesight" />
+          <ScalarProperty Name="Hearing" ColumnName="Hearing" />
+          <ScalarProperty Name="MentalAndEmotionalWellbeing" ColumnName="MentalAndEmotionalWellbeing" />
+          <ScalarProperty Name="DietaryNeeds" ColumnName="DietaryNeeds" />
+          <ScalarProperty Name="EatingHabits" ColumnName="EatingHabits" />
+          <ScalarProperty Name="DecisionMaking" ColumnName="DecisionMaking" />
+          <ScalarProperty Name="FoodPreferences" ColumnName="FoodPreferences" />
+          <ScalarProperty Name="FoodQuantities" ColumnName="FoodQuantities" />
+          <ScalarProperty Name="PersonalCare" ColumnName="PersonalCare" />
+          <ScalarProperty Name="SleepingPattern" ColumnName="SleepingPattern" />
+          <ScalarProperty Name="HealthAndSafetyAwareness" ColumnName="HealthAndSafetyAwareness" />
+          <ScalarProperty Name="LanguageAndCommunication" ColumnName="LanguageAndCommunication" />
+          <ScalarProperty Name="CulturalInformation" ColumnName="CulturalInformation" />
+          <ScalarProperty Name="CommunicatingPhysicalAndEmotionalCondition" ColumnName="CommunicatingPhysicalAndEmotionalCondition" />
+          <ScalarProperty Name="Sociability" ColumnName="Sociability" />
+          <ScalarProperty Name="BehaviourPatterns" ColumnName="BehaviourPatterns" />
+          <ScalarProperty Name="LeisureAndCommunityParticipation" ColumnName="LeisureAndCommunityParticipation" />
+          <ScalarProperty Name="EducationalAndVocationalAbilities" ColumnName="EducationalAndVocationalAbilities" />
+          <ScalarProperty Name="FinanceAndMoneyManagement" ColumnName="FinanceAndMoneyManagement" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

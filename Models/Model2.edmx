@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ClientDetailsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Postcode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TelephoneNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Capacity" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DoB" Type="datetime" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Height" Type="nvarchar" MaxLength="50" />
+          <Property Name="Weight" Type="nvarchar" MaxLength="50" />
+          <Property Name="GP" Type="nvarchar(max)" />
+          <Property Name="Dentist" Type="nvarchar(max)" />
+          <Property Name="HospitalOrCentre" Type="nvarchar(max)" />
+          <Property Name="Consultant" Type="nvarchar(max)" />
+          <Property Name="OtherHealthAgencies" Type="nvarchar(max)" />
+          <Property Name="PersonalHistory" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="HealthAndPhysicalNeeds" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mobility" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MedicalCareInformation" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Medication" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MonitoringHealth" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Eyesight" Type="nvarchar(max)" />
+          <Property Name="Hearing" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MentalAndEmotionalWellbeing" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DietaryNeeds" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="EatingHabits" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DecisionMaking" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="FoodPreferences" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="FoodQuantities" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PersonalCare" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SleepingPattern" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="HealthAndSafetyAwareness" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LanguageAndCommunication" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CulturalInformation" Type="nvarchar(max)" />
+          <Property Name="CommunicatingPhysicalAndEmotionalCondition" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Sociability" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BehaviourPatterns" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LeisureAndCommunityParticipation" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="EducationalAndVocationalAbilities" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="FinanceAndMoneyManagement" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Other" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ClientDetailsModelStoreContainer">
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ClientDetailsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Postcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TelephoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Capacity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DoB" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Height" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Dentist" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HospitalOrCentre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Consultant" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OtherHealthAgencies" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PersonalHistory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HealthAndPhysicalNeeds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mobility" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MedicalCareInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Medication" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MonitoringHealth" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Eyesight" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hearing" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MentalAndEmotionalWellbeing" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DietaryNeeds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EatingHabits" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DecisionMaking" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FoodPreferences" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FoodQuantities" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PersonalCare" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SleepingPattern" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HealthAndSafetyAwareness" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LanguageAndCommunication" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CulturalInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CommunicatingPhysicalAndEmotionalCondition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sociability" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BehaviourPatterns" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeisureAndCommunityParticipation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EducationalAndVocationalAbilities" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FinanceAndMoneyManagement" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Other" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ClientDetailsEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="Self.Client" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ClientDetailsModelStoreContainer" CdmEntityContainer="ClientDetailsEntities2">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="ClientDetailsModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+                <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="DoB" ColumnName="DoB" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="GP" ColumnName="GP" />
+                <ScalarProperty Name="Dentist" ColumnName="Dentist" />
+                <ScalarProperty Name="HospitalOrCentre" ColumnName="HospitalOrCentre" />
+                <ScalarProperty Name="Consultant" ColumnName="Consultant" />
+                <ScalarProperty Name="OtherHealthAgencies" ColumnName="OtherHealthAgencies" />
+                <ScalarProperty Name="PersonalHistory" ColumnName="PersonalHistory" />
+                <ScalarProperty Name="HealthAndPhysicalNeeds" ColumnName="HealthAndPhysicalNeeds" />
+                <ScalarProperty Name="Mobility" ColumnName="Mobility" />
+                <ScalarProperty Name="MedicalCareInformation" ColumnName="MedicalCareInformation" />
+                <ScalarProperty Name="Medication" ColumnName="Medication" />
+                <ScalarProperty Name="MonitoringHealth" ColumnName="MonitoringHealth" />
+                <ScalarProperty Name="Eyesight" ColumnName="Eyesight" />
+                <ScalarProperty Name="Hearing" ColumnName="Hearing" />
+                <ScalarProperty Name="MentalAndEmotionalWellbeing" ColumnName="MentalAndEmotionalWellbeing" />
+                <ScalarProperty Name="DietaryNeeds" ColumnName="DietaryNeeds" />
+                <ScalarProperty Name="EatingHabits" ColumnName="EatingHabits" />
+                <ScalarProperty Name="DecisionMaking" ColumnName="DecisionMaking" />
+                <ScalarProperty Name="FoodPreferences" ColumnName="FoodPreferences" />
+                <ScalarProperty Name="FoodQuantities" ColumnName="FoodQuantities" />
+                <ScalarProperty Name="PersonalCare" ColumnName="PersonalCare" />
+                <ScalarProperty Name="SleepingPattern" ColumnName="SleepingPattern" />
+                <ScalarProperty Name="HealthAndSafetyAwareness" ColumnName="HealthAndSafetyAwareness" />
+                <ScalarProperty Name="LanguageAndCommunication" ColumnName="LanguageAndCommunication" />
+                <ScalarProperty Name="CulturalInformation" ColumnName="CulturalInformation" />
+                <ScalarProperty Name="CommunicatingPhysicalAndEmotionalCondition" ColumnName="CommunicatingPhysicalAndEmotionalCondition" />
+                <ScalarProperty Name="Sociability" ColumnName="Sociability" />
+                <ScalarProperty Name="BehaviourPatterns" ColumnName="BehaviourPatterns" />
+                <ScalarProperty Name="LeisureAndCommunityParticipation" ColumnName="LeisureAndCommunityParticipation" />
+                <ScalarProperty Name="EducationalAndVocationalAbilities" ColumnName="EducationalAndVocationalAbilities" />
+                <ScalarProperty Name="FinanceAndMoneyManagement" ColumnName="FinanceAndMoneyManagement" />
+                <ScalarProperty Name="Other" ColumnName="Other" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

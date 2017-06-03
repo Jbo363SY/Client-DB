@@ -1,0 +1,219 @@
+﻿@model ClientDatabase.Models.Client
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    <h4>Client Information</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.LabelFor(c => c.Name)
+    @Html.EditorFor(c => c.Name, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Name, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Address)
+    @Html.EditorFor(c => c.Address, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Address, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Postcode)
+    @Html.EditorFor(c => c.Postcode, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Postcode, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.TelephoneNo)
+    @Html.EditorFor(c => c.TelephoneNo, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.TelephoneNo, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Capacity)
+    @Html.EditorFor(c => c.Capacity, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Capacity, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.DoB)
+    @Html.EditorFor(c => c.DoB, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.DoB, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Gender)
+    @Html.EditorFor(c => c.Gender, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Gender, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Height)
+    @Html.EditorFor(c => c.Height, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Height, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Weight)
+    @Html.EditorFor(c => c.Weight, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Weight, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.GP)
+    @Html.EditorFor(c => c.GP, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.GP, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Dentist)
+    @Html.EditorFor(c => c.Dentist, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Dentist, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.HospitalOrCentre)
+    @Html.EditorFor(c => c.HospitalOrCentre, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.HospitalOrCentre, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Consultant)
+    @Html.EditorFor(c => c.Consultant, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Consultant, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.OtherHealthAgencies)
+    @Html.EditorFor(c => c.OtherHealthAgencies, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.OtherHealthAgencies, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.PersonalHistory)
+    @Html.EditorFor(c => c.PersonalHistory, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.PersonalHistory, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.HealthAndPhysicalNeeds)
+    @Html.EditorFor(c => c.HealthAndPhysicalNeeds, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.HealthAndPhysicalNeeds, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Mobility)
+    @Html.EditorFor(c => c.Mobility, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Mobility, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.MedicalCareInformation)
+    @Html.EditorFor(c => c.MedicalCareInformation, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.MedicalCareInformation, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Medication)
+    @Html.EditorFor(c => c.Medication, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Medication, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.MonitoringHealth)
+    @Html.EditorFor(c => c.MonitoringHealth, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.MonitoringHealth, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Eyesight)
+    @Html.EditorFor(c => c.Eyesight, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Eyesight, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Hearing)
+    @Html.EditorFor(c => c.Hearing, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Hearing, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.MentalAndEmotionalWellbeing)
+    @Html.EditorFor(c => c.MentalAndEmotionalWellbeing, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.MentalAndEmotionalWellbeing, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.DietaryNeeds)
+    @Html.EditorFor(c => c.DietaryNeeds, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.DietaryNeeds, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.EatingHabits)
+    @Html.EditorFor(c => c.EatingHabits, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.EatingHabits, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.DecisionMaking)
+    @Html.EditorFor(c => c.DecisionMaking, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.DecisionMaking, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.FoodPreferences)
+    @Html.EditorFor(c => c.FoodPreferences, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.FoodPreferences, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.FoodQuantities)
+    @Html.EditorFor(c => c.FoodQuantities, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.FoodQuantities, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.PersonalCare)
+    @Html.EditorFor(c => c.PersonalCare, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.PersonalCare, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.SleepingPattern)
+    @Html.EditorFor(c => c.SleepingPattern, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.SleepingPattern, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.HealthAndSafetyAwareness)
+    @Html.EditorFor(c => c.HealthAndSafetyAwareness, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.HealthAndSafetyAwareness, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.LanguageAndCommunication)
+    @Html.EditorFor(c => c.LanguageAndCommunication, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.LanguageAndCommunication, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.CulturalInformation)
+    @Html.EditorFor(c => c.CulturalInformation, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.CulturalInformation, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.CommunicatingPhysicalAndEmotionalCondition)
+    @Html.EditorFor(c => c.CommunicatingPhysicalAndEmotionalCondition, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.CommunicatingPhysicalAndEmotionalCondition, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Sociability)
+    @Html.EditorFor(c => c.Sociability, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Sociability, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.BehaviourPatterns)
+    @Html.EditorFor(c => c.BehaviourPatterns, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.BehaviourPatterns, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.LeisureAndCommunityParticipation)
+    @Html.EditorFor(c => c.LeisureAndCommunityParticipation, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.LeisureAndCommunityParticipation, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.EducationalAndVocationalAbilities)
+    @Html.EditorFor(c => c.EducationalAndVocationalAbilities, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.EducationalAndVocationalAbilities, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.FinanceAndMoneyManagement)
+    @Html.EditorFor(c => c.FinanceAndMoneyManagement, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.FinanceAndMoneyManagement, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    @Html.LabelFor(c => c.Other)
+    @Html.EditorFor(c => c.Other, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(c => c.Other, "", new { @class = "text-danger" })
+    <br/>
+    <br/>
+    <div class="form-group">
+            <input type="submit" value="Edit" class="btn btn-info" />
+        </div>
+    @Html.ActionLink("Back to list", "Index");
+}

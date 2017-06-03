@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClientDetailsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TelephoneNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Capacity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DoB" Type="datetime" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Height" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weight" Type="nvarchar" MaxLength="50" />
+    <Property Name="GP" Type="nvarchar(max)" />
+    <Property Name="Dentist" Type="nvarchar(max)" />
+    <Property Name="HospitalOrCentre" Type="nvarchar(max)" />
+    <Property Name="Consultant" Type="nvarchar(max)" />
+    <Property Name="OtherHealthAgencies" Type="nvarchar(max)" />
+    <Property Name="PersonalHistory" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="HealthAndPhysicalNeeds" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mobility" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MedicalCareInformation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Medication" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MonitoringHealth" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Eyesight" Type="nvarchar(max)" />
+    <Property Name="Hearing" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MentalAndEmotionalWellbeing" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DietaryNeeds" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EatingHabits" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DecisionMaking" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FoodPreferences" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FoodQuantities" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PersonalCare" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SleepingPattern" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="HealthAndSafetyAwareness" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LanguageAndCommunication" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CulturalInformation" Type="nvarchar(max)" />
+    <Property Name="CommunicatingPhysicalAndEmotionalCondition" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sociability" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BehaviourPatterns" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LeisureAndCommunityParticipation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EducationalAndVocationalAbilities" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FinanceAndMoneyManagement" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Other" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ClientDetailsModelStoreContainer">
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
